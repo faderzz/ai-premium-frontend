@@ -16,8 +16,10 @@ Before making app-level changes, read:
 - Prefer Bun if there is no user preference and no existing lockfile. Otherwise follow the existing lockfile.
 - Do not mix package managers.
 - Use Effect for TypeScript application logic patterns where appropriate.
+- Use [RTK](https://github.com/rtk-ai/rtk) where useful to reduce token cost during AI-assisted development.
 - Prefer Better Auth for Next.js and similar full-stack apps unless the user chooses another auth stack.
 - Use installed skills from `.agents/skills` when relevant.
+- Make small, meaningful Git commits throughout development after coherent milestones.
 
 ## Documentation Rules
 
