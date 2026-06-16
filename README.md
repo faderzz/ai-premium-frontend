@@ -1,3 +1,5 @@
+<img height="100%"  src="https://github.com/user-attachments/assets/daaad43a-09a7-4d08-9a53-ae5c21c542fb" />
+
 # AI Premium Frontend
 
 A cloneable starter repo for building beautiful, shippable web apps with AI assistance.
