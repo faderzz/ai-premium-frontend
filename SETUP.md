@@ -18,6 +18,7 @@ Build beautiful, shippable software. The repo should help agents produce real pr
 - Use [RTK](https://github.com/rtk-ai/rtk) where useful to reduce token cost during AI-assisted development.
 - Use the user's package manager preference. If no preference or lockfile exists, prefer Bun.
 - Make small, meaningful Git commits throughout development.
+- Inspect shadcn registries before choosing UI libraries to confirm the selected stack has the essential components required by the product.
 
 ## First Decisions
 
@@ -97,6 +98,7 @@ When comparing base libraries, check:
 - Animation style and duration
 - Form controls, menus, dialogs, tables, cards, nav, and command surfaces
 - Accessibility defaults
+- shadcn registry coverage for essential product components
 - Installation complexity and maintainability
 - Runtime performance and bundle impact
 - Whether the components are genuinely useful in real product screens
@@ -113,6 +115,7 @@ Specialist libraries can be added when the product needs them. They do not count
 - [Font Trio](https://www.fonttrio.xyz/) for font pairing.
 - [Fluid Functionalism](https://www.fluidfunctionalism.com/) for fluid interactions and motion.
 - [Animate UI](https://animate-ui.com/) for selective animation components.
+- [Web Haptics](https://github.com/lochie/web-haptics) for tactile web microinteractions on supported devices, with graceful fallbacks.
 
 Use these only when they fit the product. Do not add them just because they look impressive.
 
@@ -129,6 +132,7 @@ Human-selected base UI candidates:
 - [Cubby UI](https://www.cubby-ui.dev/)
 - [Eldora UI](https://www.eldoraui.site/)
 - [Emerald UI](https://www.emerald-ui.com/)
+- [Fluid Functionalism](https://www.fluidfunctionalism.com/)
 
 Useful optional enhancers:
 
@@ -136,8 +140,23 @@ Useful optional enhancers:
 - [SoundCN](https://soundcn.xyz/)
 - [Font Trio](https://www.fonttrio.xyz/)
 - [Fluid Functionalism](https://www.fluidfunctionalism.com/)
+- [Web Haptics](https://github.com/lochie/web-haptics/)
 - [EvilCharts](https://evilcharts.com/)
 - [FlightCN](https://flightcn.yencheng.dev/)
+
+## shadcn Registry Coverage
+
+For shadcn-compatible libraries, check the registry before committing to the stack. Confirm the chosen libraries cover the core product surface:
+
+- Buttons, links, icon buttons, and button groups
+- Inputs, textareas, selects, checkboxes, radios, switches, sliders, and date controls
+- Forms, validation messages, labels, and help text
+- Dialogs, drawers, sheets, popovers, dropdown menus, tooltips, and toasts
+- Tabs, accordions, breadcrumbs, pagination, and navigation
+- Tables, lists, cards, badges, avatars, empty states, loading states, and error states
+- Command palettes, search surfaces, filters, and data display patterns
+
+If a library looks strong but lacks essential components, pair it carefully with another compatible base library or ask the human to choose a different base stack.
 
 ## Effect Policy
 
@@ -214,6 +233,7 @@ Before handoff, check:
 - Text fits in buttons, cards, tables, sidebars, modals, and mobile views.
 - Loading, empty, error, disabled, hover, focus, and active states exist where users expect them.
 - Motion is smooth and purposeful.
+- Haptic feedback, if used, is optional, subtle, and gracefully disabled on unsupported devices.
 - Keyboard navigation works for interactive flows.
 - Contrast is acceptable.
 - The app is responsive across mobile and desktop.

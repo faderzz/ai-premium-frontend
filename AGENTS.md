@@ -12,6 +12,8 @@ Before making app-level changes, read:
 - Do not choose the main base UI libraries alone. Ask the human to select the 2-3 primary UI libraries unless they already did.
 - Do not use plain shadcn/ui as the whole design system. shadcn can be useful tooling, but this repo is meant to avoid generic shadcn output.
 - Specialist libraries such as charts, sound, maps, typography, and motion do not count against the 2-3 base UI library limit.
+- Fluid Functionalism may count as a base UI library when using its general components such as buttons, accordions, badges, switches, and tables.
+- Check shadcn registries before choosing UI libraries to confirm the selected stack has the essential components the product needs.
 - Keep visual systems coherent across radius, spacing, typography, shadows, density, and motion.
 - Prefer Bun if there is no user preference and no existing lockfile. Otherwise follow the existing lockfile.
 - Do not mix package managers.
@@ -20,6 +22,7 @@ Before making app-level changes, read:
 - Prefer Better Auth for Next.js and similar full-stack apps unless the user chooses another auth stack.
 - Use installed skills from `.agents/skills` when relevant.
 - Make small, meaningful Git commits throughout development after coherent milestones.
+- [Web Haptics](https://github.com/lochie/web-haptics) can be used for tactile microinteractions, but support varies by device and browser, so always provide graceful fallbacks.
 
 ## Documentation Rules
 

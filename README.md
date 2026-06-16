@@ -27,6 +27,7 @@ This repo favors libraries that help an app feel finished:
 - Motion should improve interaction quality, not make the app feel laggy.
 - Human taste should choose the base UI system. Agents can recommend, but should not independently decide the core design stack.
 - Specialist libraries do not count against the 2-3 base UI library limit when they solve a narrow problem like charts, sound, maps, or typography.
+- Agents should inspect shadcn-compatible registries before choosing libraries so the selected stack has the essential components the product needs.
 
 ## Curated Library Shelf
 
@@ -49,13 +50,15 @@ These are hand-picked candidate UI/component libraries. A human should choose th
 - [Cubby UI](https://www.cubby-ui.dev/)
 - [Eldora UI](https://www.eldoraui.site/)
 - [Emerald UI](https://www.emerald-ui.com/)
+- [Fluid Functionalism](https://www.fluidfunctionalism.com/) can also be used as a general UI component library for components like buttons, accordions, badges, switches, and tables.
 
 ### Interaction, Motion, Sound, and Typography
 
 - [Animate UI](https://animate-ui.com/) can help many projects, but use only the components that fit the product.
 - [SoundCN](https://soundcn.xyz/) is optional, but useful for subtle product microinteractions in dashboards and actual software.
 - [Font Trio](https://www.fonttrio.xyz/) is useful for font pairing and typography exploration.
-- [Fluid Functionalism](https://www.fluidfunctionalism.com/) is recommended for fluid animations and high-quality interaction patterns.
+- [Fluid Functionalism](https://www.fluidfunctionalism.com/) is also recommended for fluid animations and high-quality interaction patterns.
+- [Web Haptics](https://github.com/lochie/web-haptics) can be used for tactile web microinteractions where supported. Device and browser support varies, so implementations should always degrade gracefully.
 
 ### Specialist Libraries
 
@@ -69,6 +72,10 @@ These are use-case libraries and do not count as base UI libraries.
 For Next.js or similar full-stack frameworks, prefer the Better Auth stack unless the user explicitly chooses another approach.
 
 When setting up Better Auth, Prisma, Drizzle, database clients, framework APIs, SDKs, CLI tools, or cloud services, use Context7 MCP to fetch current docs first. Do not rely on memory for integration details.
+
+## UI Coverage Checks
+
+When evaluating shadcn-compatible UI libraries, inspect their registries before committing to the stack. Confirm the selected libraries cover the essential components the product needs, including buttons, inputs, forms, selects, dialogs, dropdown menus, tooltips, accordions, tabs, tables, badges, switches, navigation, empty states, loading states, and command/search surfaces.
 
 ## Skills
 
